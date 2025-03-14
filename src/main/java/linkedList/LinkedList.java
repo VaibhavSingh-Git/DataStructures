@@ -62,6 +62,26 @@ public class LinkedList<T> {
         size++;
     }
 
+    //delete
+    public void deleteAt(int index){
+        if(getSize()!=0 && getSize() > index){
+            if(index==0){
+                head = head.next;
+            }else{
+                int currentIndex = 0;
+                Node temp = head;
+                while(currentIndex < index-1){
+                    temp = temp.next;
+                    currentIndex++;
+                }
+                temp.next = temp.next.next;
+            }
+            size--;
+            return;
+        }
+        System.out.println("invalid index "+ index);
+    }
+
     public int getSize() {
         return size;
     }
