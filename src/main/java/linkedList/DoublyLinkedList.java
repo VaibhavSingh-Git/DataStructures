@@ -18,7 +18,7 @@ public class DoublyLinkedList {
             this.next = null;
         }
     }
-
+    //insert at the head of list
     public void insertAtBeginning(int value){
         Node temp = new Node(value);
         if(head == null){
@@ -31,6 +31,7 @@ public class DoublyLinkedList {
         }size++;
     }
 
+    //insert at the end of list
     public void insertAtEnd(int value){
         Node temp = new Node(value);
         if(head == null){
@@ -43,6 +44,7 @@ public class DoublyLinkedList {
         size++;
     }
 
+    //insert at specific position
     public void insertAtPosition(int value, int position){
         Node node = new Node(value);
         if(position == 0){
@@ -67,7 +69,7 @@ public class DoublyLinkedList {
         }
     }
 
-
+    //print list
     public void print(){
         Node temp = head;
         while (temp !=null){
