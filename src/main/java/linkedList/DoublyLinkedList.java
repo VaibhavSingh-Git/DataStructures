@@ -37,13 +37,42 @@ public class DoublyLinkedList {
             head = temp;
         }else{
             temp.prev = tail;
+            tail.next = temp;
         }
         tail = temp;
         size++;
     }
 
-//    public void insertAtPosition(int value, int position){
-//        Node temp = new Node(value);
-//
-//    }
+    public void insertAtPosition(int value, int position){
+        Node node = new Node(value);
+        if(position == 0){
+            insertAtBeginning(value);
+        }
+        else if(head == null && position > 0 ){
+            System.out.println("Invalid position "+position);
+        }else if(position > size){
+            System.out.println("Invalid position "+position);
+        }else{
+            int count = 0;
+            Node temp = head;
+            while(count != position && temp.next!=null){
+                temp = temp.next;
+                count++;
+            }
+            node.prev = temp.prev;
+            node.next = temp;
+            temp.prev.next = node;
+            temp.prev = node;
+            size++;
+        }
+    }
+
+
+    public void print(){
+        Node temp = head;
+        while (temp !=null){
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+    }
 }
