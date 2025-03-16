@@ -77,4 +77,13 @@ public class DoublyLinkedList {
             temp = temp.next;
         }
     }
+
+    //print list from end
+    public void printReverse(){
+        Node temp = tail;
+        while (temp !=null){
+            System.out.println(temp.value);
+            temp = temp.prev;
+        }
+    }
 }
