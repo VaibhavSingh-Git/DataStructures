@@ -3,7 +3,7 @@ package linkedList;
 public class LinkedList<T> {
 
     int size = 0;
-    private Node head = null;
+    public Node head = null;
 
     @Override
     public String toString() {
@@ -15,9 +15,9 @@ public class LinkedList<T> {
         return "LinkedList " + "size= " + size + ", head=" + head ;
     }
 
-    private static class Node<T> {
-        T value;
-        Node next;
+    public static class Node<T> {
+        public T value;
+        public Node next;
 
         public Node(T value) {
             this.value = value;
