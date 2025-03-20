@@ -15,15 +15,6 @@ public class LinkedList<T> {
         return "LinkedList " + "size= " + size + ", head=" + head ;
     }
 
-    public static class Node<T> {
-        public T value;
-        public Node next;
-
-        public Node(T value) {
-            this.value = value;
-            this.next = null;
-        }
-    }
 
     public void insertAtHead(T value) {
         Node current = new Node(value);

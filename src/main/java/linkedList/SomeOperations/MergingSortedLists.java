@@ -2,6 +2,7 @@ package linkedList.SomeOperations;
 
 
 import linkedList.LinkedList;
+import linkedList.Node;
 
 //Given two sorted linked list, merge them into single sorted linked list
 public class MergingSortedLists {
@@ -15,15 +16,15 @@ public class MergingSortedLists {
         LinkedList<Integer> l2 = new LinkedList<>();
         l2.sortedInsert(2);
         l2.sortedInsert(115);
-        l2.sortedInsert(225);
+        l2.sortedInsert(22);
         l2.sortedInsert(1150);
-        sort(l1,null);
+        sort(l1,l2);
     }
     //assuming both list are already sorted
     public static void sort(LinkedList l1, LinkedList l2){
-        LinkedList.Node<Integer> p = l1.head;
-        LinkedList.Node<Integer> q = l2.head;
-        LinkedList.Node<Integer> sorting = null ;
+        Node<Integer> p = l1.head;
+        Node<Integer> q = l2.head;
+        Node<Integer> sorting = null ;
         LinkedList<Integer> merged = new LinkedList<>();
 
         if(p == null){

@@ -2,6 +2,7 @@ package linkedList.SomeOperations;
 
 
 import linkedList.LinkedList;
+import linkedList.Node;
 
 //This class contains methods to reverse a given linkedList
 public class ReverseLinkedList {
@@ -15,9 +16,9 @@ public class ReverseLinkedList {
             return;
         }
 
-        LinkedList.Node<Integer> prev = null;
-        LinkedList.Node<Integer> curr = list.head;
-        LinkedList.Node<Integer> next;
+        Node<Integer> prev = null;
+        Node<Integer> curr = list.head;
+        Node<Integer> next;
 
         while(curr != null){
             next = curr.next;
@@ -30,11 +31,11 @@ public class ReverseLinkedList {
     }
 
     //recursive method for reversing a linked list
-    public static LinkedList.Node reverse(LinkedList.Node head){
+    public static Node reverse(Node head){
         if(head ==null){
-            return head;
+            return null;
         }
-        LinkedList.Node p = null,q = null;
+        Node p ,q;
         p = head;
         q = p.next;
         if(q == null){
@@ -55,8 +56,7 @@ public class ReverseLinkedList {
         l.sortedInsert(25);
         l.sortedInsert(115);
         //l.toString();
-        LinkedList.Node q = reverse(l.head);
-        l.head = q;
+        l.head = reverse(l.head);
         l.toString();
         //reverse(l);
     }
