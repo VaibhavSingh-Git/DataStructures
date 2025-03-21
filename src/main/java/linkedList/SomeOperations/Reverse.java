@@ -5,7 +5,7 @@ import linkedList.LinkedList;
 import linkedList.Node;
 
 //This class contains methods to reverse a given linkedList
-public class ReverseLinkedList {
+public class Reverse {
     //method to reverse a linked list
     public static void reverse(LinkedList<Integer> list){
 

@@ -4,8 +4,7 @@ package linkedList.SomeOperations;
 import linkedList.LinkedList;
 import linkedList.Node;
 
-//Given two sorted linked list, merge them into single sorted linked list
-public class MergingSortedLists {
+public class Merge {
 
     public static void main(String[] args) {
         LinkedList<Integer> l1 = new LinkedList<>();
@@ -20,6 +19,7 @@ public class MergingSortedLists {
         l2.sortedInsert(1150);
         sort(l1,l2);
     }
+    //Given two sorted linked list, merge them into single sorted linked list
     //assuming both list are already sorted
     public static void sort(LinkedList l1, LinkedList l2){
         Node<Integer> p = l1.head;
